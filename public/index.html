@@ -5,17 +5,17 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="/src/output.css" rel="stylesheet">
-    <title>To Do List</title>
+    <title>Todo List</title>
 </head>
 
 <body>
     <div class="bg-zinc-950 h-screen text-white flex items-center justify-center">
-        <div class="container mx-auto my-auto px-4 py-8 max-w-5xl">
+        <div class="container mx-auto px-4 py-8 max-w-5xl">
             <div class="bg-[#111] rounded-xl p-4 lg:p-6 shadow-lg border border-purple-500/20">
                 <div class="flex justify-between items-center mb-6">
                     <h2 class="text-2xl font-bold">To Do</h2>
                     <button id="addTodoBtn"
-                        class="bg-gradient-to-r from-purple-500 to-pink-500 hover:from-purple-600 hover:to-pink-600 text-white px-4 py-2 rounded-lg flex items-center transition-all duration-300 transform hover:scale-105">
+                        class="bg-gradient-to-r from-purple-500 to-pink-500 hover:from-purple-600 hover:to-pink-600 text-white px-4 py-2 rounded-lg flex items-center transition-all duration-300 transform hover:scale-105 cursor-pointer">
                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="size-5">
                             <path
                                 d="M10.75 4.75a.75.75 0 0 0-1.5 0v4.5h-4.5a.75.75 0 0 0 0 1.5h4.5v4.5a.75.75 0 0 0 1.5 0v-4.5h4.5a.75.75 0 0 0 0-1.5h-4.5v-4.5Z" />
@@ -23,10 +23,7 @@
                         Add Todo
                     </button>
                 </div>
-
-                <div id="taskList" class="space-y-4 h-[480px] max-h-full overflow-y-auto pr-2">
-                   
-                </div>
+                <div id="taskList" class="space-y-4 h-[480px] max-h-full overflow-y-auto pr-2"></div>
             </div>
         </div>
 
@@ -54,7 +51,7 @@
                             class="w-full bg-zinc-700 rounded-lg p-2 text-white border border-gray-600 focus:border-purple-500 focus:ring-2 focus:ring-purple-500 focus:outline-none transition-all duration-300"></textarea>
                     </div>
                     <div class="flex justify-end space-x-4">
-                        <button type="button" onclick="closeModal('newTaskModal')"
+                        <button id="cancelTodoBtn" type="button" onclick="closeModal('newTaskModal')"
                             class="px-4 py-2 bg-gray-700 rounded-lg hover:bg-gray-600 transition-colors duration-300">
                             Cancel
                         </button>
@@ -71,6 +68,7 @@
 
     <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
     <script src="/scripts/app.js"></script>
+
 </body>
 
 </html>
